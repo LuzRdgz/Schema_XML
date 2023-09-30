@@ -5,10 +5,10 @@
                 anio CDATA #REQUIRED>
     <!ELEMENT titulo (#PCDATA)>
     <!ELEMENT compositores (compositor)*>
-    <!ELEMENT compositor (nombres|apellidos)*>
+    <!ELEMENT compositor (nombres,apellidos)*>
     <!ELEMENT nombres (#PCDATA)>
     <!ELEMENT apellidos (#PCDATA)>
     <!ELEMENT productores (productor)*>
-    <!ELEMENT productor (nombres|apellidos)*>
+    <!ELEMENT productor (nombres,apellidos)*>
     <!ELEMENT sello (#PCDATA)>
     <!ELEMENT artista (#PCDATA)>
