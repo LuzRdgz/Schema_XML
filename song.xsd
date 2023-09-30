@@ -1,37 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="Cancion" type="CancionType"/>
+  <xs:element name="Canciones" type="CancionesType"/>
   <xs:complexType name="compositorType">
     <xs:sequence>
-      <xs:element type="xs:string" name="nombres"/>
-      <xs:element type="xs:string" name="apellidos"/>
+      <xs:element name="nombres">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Pharrell"/>
+            <xs:enumeration value="Adele"/>
+            <xs:enumeration value="Greg"/>
+            <xs:enumeration value="Hyun Woo"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="apellidos">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Williams"/>
+            <xs:enumeration value="Adkins"/>
+            <xs:enumeration value="Kurstin"/>
+            <xs:enumeration value="Ha"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="compositoresType">
     <xs:sequence>
-      <xs:element type="compositorType" name="compositor"/>
+      <xs:element type="compositorType" name="compositor" maxOccurs="unbounded" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="productorType">
     <xs:sequence>
-      <xs:element type="xs:string" name="nombres"/>
-      <xs:element type="xs:string" name="apellidos"/>
+      <xs:element name="nombres">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Pharrell"/>
+            <xs:enumeration value="Greg"/>
+            <xs:enumeration value="Hyun-Woo"/>
+            <xs:enumeration value="Kyu-ho"/>
+            <xs:enumeration value="Jung-gil"/>
+            <xs:enumeration value="Ki-bum"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="apellidos">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Williams"/>
+            <xs:enumeration value="Kurstin"/>
+            <xs:enumeration value="Ha"/>
+            <xs:enumeration value="Jeon"/>
+            <xs:enumeration value="Lee"/>
+            <xs:enumeration value="Kim"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="productoresType">
     <xs:sequence>
-      <xs:element type="productorType" name="productor"/>
+      <xs:element type="productorType" name="productor" maxOccurs="unbounded" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="CancionType">
     <xs:sequence>
-      <xs:element type="xs:string" name="titulo"/>
+      <xs:element name="titulo">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Give it 2 me"/>
+            <xs:enumeration value="Hello"/>
+            <xs:enumeration value="Pulse"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
       <xs:element type="compositoresType" name="compositores"/>
       <xs:element type="productoresType" name="productores"/>
-      <xs:element type="xs:string" name="sello"/>
-      <xs:element type="xs:string" name="artista"/>
+      <xs:element name="sello">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Warner Bros. Records"/>
+            <xs:enumeration value="XL Recordings"/>
+            <xs:enumeration value="Interpack Corporation"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="artista">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Madonna"/>
+            <xs:enumeration value="Adele Adkins"/>
+            <xs:enumeration value="Guckkasten"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
     </xs:sequence>
-    <xs:attribute type="xs:string" name="duracion"/>
-    <xs:attribute type="xs:string" name="anio"/>
+    <xs:attribute type="xs:string" name="duracion" use="optional"/>
+    <xs:attribute type="xs:string" name="anio" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="CancionesType">
+    <xs:sequence>
+      <xs:element type="CancionType" name="Cancion" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
   </xs:complexType>
 </xs:schema>

@@ -1,19 +1,71 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE Cancion SYSTEM "song.dtd">
-<Cancion duracion="4:47" anio="2008">
-    <titulo>Give it 2 me</titulo>
-    <compositores>
-        <compositor>
-            <nombres>Pharrell</nombres>
-            <apellidos>Williams</apellidos>
-        </compositor>
-    </compositores>
-    <productores>
-        <productor>
-            <nombres>Pharrell</nombres>
-            <apellidos>Williams</apellidos>
-        </productor>
-    </productores>
-    <sello>Warner Bros. Records</sello>
-    <artista>Madonna</artista>
-</Cancion>
+<!DOCTYPE Canciones SYSTEM "song.dtd">
+<Canciones>
+    <Cancion duracion="4:47" anio="2008">
+        <titulo>Give it 2 me</titulo>
+        <compositores>
+            <compositor>
+                <nombres>Pharrell</nombres>
+                <apellidos>Williams</apellidos>
+            </compositor>
+        </compositores>
+        <productores>
+            <productor>
+                <nombres>Pharrell</nombres>
+                <apellidos>Williams</apellidos>
+            </productor>
+        </productores>
+        <sello>Warner Bros. Records</sello>
+        <artista>Madonna</artista>
+    </Cancion>
+    <Cancion duracion="4:56" anio="2015">
+        <titulo>Hello</titulo>
+        <compositores>
+            <compositor>
+                <nombres>Adele</nombres>
+                <apellidos>Adkins</apellidos>
+            </compositor>
+            <compositor>
+                <nombres>Greg</nombres>
+                <apellidos>Kurstin</apellidos>
+            </compositor>
+        </compositores>
+        <productores>
+            <productor>
+                <nombres>Greg</nombres>
+                <apellidos>Kurstin</apellidos>
+            </productor>
+        </productores>
+        <sello>XL Recordings</sello>
+        <artista>Adele Adkins</artista>
+    </Cancion>
+    <Cancion duracion="3:49" anio="2016">
+        <titulo>Pulse</titulo>
+        <compositores>
+            <compositor>
+                <nombres>Hyun Woo</nombres>
+                <apellidos>Ha</apellidos>
+            </compositor>
+        </compositores>
+        <productores>
+            <productor>
+                <nombres>Hyun-Woo</nombres>
+                <apellidos>Ha</apellidos>
+            </productor>
+            <productor>
+                <nombres>Kyu-ho</nombres>
+                <apellidos>Jeon</apellidos>
+            </productor>
+            <productor>
+                <nombres>Jung-gil</nombres>
+                <apellidos>Lee</apellidos>
+            </productor>
+            <productor>
+                <nombres>Ki-bum</nombres>
+                <apellidos>Kim</apellidos>
+            </productor>
+        </productores>
+        <sello>Interpack Corporation</sello>
+        <artista>Guckkasten</artista>
+    </Cancion>
+</Canciones>
